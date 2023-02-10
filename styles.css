@@ -25,14 +25,15 @@ header a {
   background-color: rgb(0, 0, 0);
   color: white;
   display: flex;
-  padding-top: 50px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap-reverse;
   gap: 10px;
+  padding-top: 50px;
 }
 
 .opening.text {
-  padding: 100px 0;
+  padding: 0 100px 100px;
 }
 
 .opening img {
@@ -56,12 +57,16 @@ header a {
   gap: 32px;
   padding-top:64px;
   text-align: center;
+  font-size: 20px;
 }
 
 .products {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 52px;
+  padding: 30px 0 80px;
+  min-width: 300px;
 }
 
 .products img {
@@ -73,13 +78,69 @@ header a {
   max-width: 300px;
 }
 /*------------------- QUOTE -------------------*/
+.quote-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgb(0, 0, 0);
+  background-image: url(images/sameer-unsplash.jpg);
+  padding: 100px 0;
+}
 
+.quote-box {
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+  padding: 100px;
+  align-self: center;
+  max-width: 1000px;
+  margin: 0px 50px;
+}
+
+.quote {
+  align-self: center;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.author {
+  font-size: 20px;
+}
 /*------------------- ACTION -------------------*/
+.action-area {
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  padding: 80px 0;
+  font-size: 20px;
+}
 
+.action-box {
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 80px 80px 30px;
+}
+
+.action-box .text {
+  margin: 0 50px 50px;
+}
+
+.action-box .button {
+  margin-bottom: 50px;
+}
 /*------------------- FOOTER -------------------*/
 footer {
   background-color: black;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 ul {
@@ -90,7 +151,12 @@ a {
   text-decoration: none;
 }
 
+/*------------------- TYPE SELECTORS -------------------*/
 h1, h2, h3, h4, h5, h6, ul {
   padding: 0;
   margin: 0;
+}
+
+h5 {
+  font-size: 28px;
 }
