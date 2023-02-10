@@ -1,0 +1,96 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+/*------------------- HEADER -------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 64px 48px;
+  background-color: black;
+}
+
+.header-links {
+  display: flex;
+  gap: 50px;
+}
+
+header a {
+  color: white;
+}
+
+/*------------------- HEADER -------------------*/
+.opening-area {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.opening.text {
+  padding: 100px 0;
+}
+
+.opening img {
+  width: 800px;
+}
+
+/*------------------- HEADER -------------------*/
+.blank {
+  background-color: rgb(63, 63, 63);
+  height: 10px;
+}
+
+/*------------------- OPTIONS -------------------*/
+.options-area {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding-top:64px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.products img {
+  width: 300px;
+  padding-bottom: 30px;
+}
+
+.option {
+  max-width: 300px;
+}
+/*------------------- QUOTE -------------------*/
+
+/*------------------- ACTION -------------------*/
+
+/*------------------- FOOTER -------------------*/
+footer {
+  background-color: black;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0;
+}
