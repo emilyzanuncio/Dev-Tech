@@ -1,17 +1,43 @@
-body {
-  box-sizing: border-box;
-  margin: 0;
+@font-face {
+  font-family: Azonix;
+  src: url("styles/fonts/azonix-font/Azonix-1VB0.woff2") format("woff2");
+  font-style: normal;
 }
+
+@font-face {
+  font-family: Montserrat;
+  src: url("styles/fonts/Montserrat/Montserrat-Medium.woff2") format("woff2");
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text {
+  font-family: Montserrat, monospace, "PT Sans", Tahoma, sans-serif;
+  font-size: 18px;
+}
+
 /*------------------- HEADER -------------------*/
 header {
+  background-color: black;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 48px 64px 48px;
-  background-color: black;
+}
+
+.logo {
+  font-family: Azonix, monospace, "PT Sans", Tahoma, sans-serif;
+  font-size: 2em;
+  padding-right: 50px;
 }
 
 .header-links {
+  font-size: 18px;
   display: flex;
   gap: 50px;
 }
@@ -20,7 +46,7 @@ header a {
   color: white;
 }
 
-/*------------------- HEADER -------------------*/
+/*------------------- TOP PANNEL -------------------*/
 .opening-area {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -33,14 +59,24 @@ header a {
 }
 
 .opening.text {
-  padding: 0 100px 100px;
+  padding: 0 50px 100px;
+  max-width: 600px;
+}
+
+.top-title {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.top.button {
+  margin-top: 25px;
 }
 
 .opening img {
   width: 800px;
 }
 
-/*------------------- HEADER -------------------*/
+/*------------------- GREY SPACE -------------------*/
 .blank {
   background-color: rgb(63, 63, 63);
   height: 10px;
@@ -60,6 +96,10 @@ header a {
   font-size: 20px;
 }
 
+.info-title {
+  font-size: 36px;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -69,9 +109,9 @@ header a {
   min-width: 300px;
 }
 
-.products img {
+.product-image {
   width: 300px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .option {
@@ -79,35 +119,38 @@ header a {
 }
 /*------------------- QUOTE -------------------*/
 .quote-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
   background-color: rgb(0, 0, 0);
   background-image: url(images/sameer-unsplash.jpg);
+  display: flex;
+  justify-content: center;
   padding: 100px 0;
 }
 
 .quote-box {
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .8);
   color: white;
-  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-self: center;
+  
   max-width: 1000px;
   margin: 0px 50px;
+  padding: 100px;
+  border-radius: 50px;
 }
 
 .quote {
   align-self: center;
   text-align: center;
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .author {
-  font-size: 20px;
+  align-self: flex-end;
 }
+
 /*------------------- ACTION -------------------*/
 .action-area {
   background-color: rgba(0, 0, 0, .8);
@@ -123,15 +166,16 @@ header a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 80px 80px 30px;
+  padding: 100px;
+  gap: 50px;
 }
 
-.action-box .text {
-  margin: 0 50px 50px;
+.action-title {
+  margin-bottom: 10px;
 }
 
 .action-box .button {
-  margin-bottom: 50px;
+  align-self: center;
 }
 /*------------------- FOOTER -------------------*/
 footer {
@@ -149,6 +193,63 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+/*--------------- UNDERLINE HOVER EFFECT ---------------*/
+.underline-hover {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.underline-hover::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease-out;
+}
+
+.underline-hover:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+/*------------------- IMAGE HOVER ANIMATION -------------------*/
+.product-image {
+  transition: .3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+/*------------------- BUTTON HOVER ANIMATION -------------------*/
+.button {
+  font-family: Montserrat, monospace, "PT Sans", Tahoma, sans-serif;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.button.hover-effect:hover {
+  background:rgb(0, 0, 0);
+  box-shadow: 0px 0px 20px  rgba(255,255,255,0.6);;
 }
 
 /*------------------- TYPE SELECTORS -------------------*/
